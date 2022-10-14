@@ -3,12 +3,6 @@ var mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 var order = new Schema({
-  
-
-  date: {
-    type: Date,
-    required: true,
-  },
 
   total: {
     type: Number,
@@ -26,6 +20,10 @@ var order = new Schema({
   },
 
   description:[{
+    product: {
+      type: Schema.Types.ObjectId,
+      ref: 'product',
+    },
     amount: {
       type: Number,
       required: true,
@@ -36,10 +34,10 @@ var order = new Schema({
       required: true,
     },
   
-    product: {
-      type: Schema.Types.ObjectId,
-      ref: 'product',
-    },
+    address:{
+      type:String,
+      required:true,
+    }
   
    
   

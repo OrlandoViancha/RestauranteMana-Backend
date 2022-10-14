@@ -4,9 +4,9 @@ const registrerUser= async(req, res, next)=> {
 
     
     try{
-
+     
        const user=new User(req.body)
-
+      
        const result= await user.save();
 
        res.send({result:true})
