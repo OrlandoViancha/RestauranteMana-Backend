@@ -8,7 +8,7 @@ const register=require('./routes/register')
 const payload=require('./routes/payload')
 const orders=require('./routes/orders')
 const products=require('./routes/products')
-const report_orders=require('./routes/report_orders')
+const report=require('./routes/report')
 const cors = require('cors');
 require("./data/driver_data")
 const bodyParser=require("body-parser")
@@ -24,9 +24,7 @@ app.use('/registrer',register)
 app.use('/payload',payload)
 app.use('/orders',orders)
 app.use('/product',products)
-//app.use('/report_orders',report_orders)
-
-
+app.use('/report',report)
 
 app.listen(app.get('port'),()=>{
 

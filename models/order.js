@@ -34,10 +34,6 @@ var order = new Schema({
       required: true,
     },
   
-    address:{
-      type:String,
-      required:true,
-    }
   
    
   
